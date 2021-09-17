@@ -50,13 +50,68 @@ O formulário deve ter tratativa de erro, sendo assim em caso de algum erro com 
 
 ## API PARA INTEGRAÇÃO
 
-Os cadastros de contato devem conter 3 campos, sendo eles
-1. campo obrigatório nomeado name (String de no máximo 200 carácteres)
-2. campo obrigatório nomeado email (String de máximo 200 carácteres contendo obrigatório nomeado válido não necessariamente existente) 
-3. campo required mobile (Interger de no máximo 11 carácteres)
+Autenticação
+```
+POST
+https://testfrontpl.herokuapp.com/login
 
-O formulário deve ter tratativa de erro, sendo assim em caso de algum erro com o servidor uma mensagem tratada deve ser apresentada
-    
+body:
+
+{
+    "user": "devfrontpl@diwe.com.br",
+    "pwd": "frontPl@2021"
+}
+```
+
+Todas as demais rotas precisam receber o token como header.
+```
+HEADER
+content-type: appllication-json
+x-access-token: token retornado pela signin
+```
+
+Criar Cliente
+```
+POST
+https://testfrontpl.herokuapp.com/clientes
+
+{
+    "name": "nome_do_cliente",
+    "email": "email_do_cliente",
+    "mobile": "telefone_do_cliente"
+}
+```
+
+Listar todos os cliente
+```
+GET
+https://testfrontpl.herokuapp.com/clientes
+```
+
+Detalhes do cliente
+```
+GET
+https://testfrontpl.herokuapp.com/clientes/:id
+```
+
+Update de cliente
+```
+PUT
+https://testfrontpl.herokuapp.com/clientes/:id
+
+{
+    "name": "nome_do_cliente",
+    "email": "email_do_cliente",
+    "mobile": "telefone_do_cliente"
+}
+```
+
+Excluir Cliente
+```
+DELETE
+https://testfrontpl.herokuapp.com/clientes/:id
+```
+
 
 ### Para envio do teste:
 
