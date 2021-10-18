@@ -27,7 +27,7 @@
 
   
 
-1. Visualmente deverá estilizar seus elementos utilizando css puro ( sem frameworks como bootstrap ou tailwind), lembrando que a utilização de flexbox e elementos responsivos serão considerados diferenciais.
+1. Visualmente deverá estilizar seus elementos utilizando css puro ( sem frameworks como bootstrap ou tailwind), lembrando que a utilização de flexbox e elementos responsivos serão considerados diferenciais e deve o template definido neste template https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694.
 
   
 
