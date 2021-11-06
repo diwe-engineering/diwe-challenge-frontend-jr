@@ -2,7 +2,7 @@
 
   
 
-# Dev Froned Pleno - Desafio
+# Dev Front-end Pleno 1 - Desafio
 
   
 
