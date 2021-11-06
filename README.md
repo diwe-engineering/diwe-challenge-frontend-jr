@@ -6,7 +6,7 @@
 
   
 
-### O candidato deverá desenvolver um crud de contatos com autenticação, abaixo os requisitos de sistema.
+### O candidato (a) deverá desenvolver um crud de contatos com autenticação, abaixo os requisitos de sistema.
 
 ## STACK
 
@@ -125,4 +125,4 @@ https://testfrontpl.herokuapp.com/clientes/:id
 
   
 
-2. Enviar o link do repositório para os emails de Paulo Tozzi (paulo.tozzi@diwe.com.br), Vinicius Silva (vinicius.silva@diwe.com.br) e Maicon Passos (maicon.passos@diwe.com.br)
+2. Enviar o link do repositório para os emails de Marcus Vinicius (vinicius.bassalobre@diwe.com.br), Vinicius Silva (vinicius.silva@diwe.com.br) e Maicon Passos (maicon.passos@diwe.com.br)
