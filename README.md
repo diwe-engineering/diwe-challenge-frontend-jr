@@ -1,128 +1,109 @@
+<p align="center">
+  <a href="https://diwe.com.br/" >
+      <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQEiCVXospgLAg/company-logo_200_200/0/1536596871797?e=1649894400&v=beta&t=b4Uup-NGAXg7tu594aODvYIzTRmCjq-yxVrII5aIRJU" alt="DIWE" width="300px"/>
+  </a>
+</p>
+
+___
 
 
-  
+# Sobre o Desafio
+O desafio consistente na criação de uma aplicação web para gerenciamento de uma lista de contatos seguindo o layout do Figma. Atente-se aos estilos do protótipo e detalhes de usabilidade do usuário.
 
-# Dev Front-end Pleno 1 - Desafio
+# Referências
+- [Figma](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=804%3A29)
+- [Ícones](https://feathericons.com/)
+- [Tipografia - Montserrat](https://fonts.google.com/specimen/Montserrat?query=mont)
 
-  
+# API
+Já deixamos uma API online pra você se preocupar somente com o desenvolvimento.
 
-### O candidato (a) deverá desenvolver um crud de contatos com autenticação, abaixo os requisitos de sistema.
+https://contacts-api.prd.parceirodaconstrucao.com.br/
 
-## STACK
+### Autenticação
+O aplicativo deve possuir um login obrigatório para acesso aos recursos sendo que todas as requisições seguintes devem ser interepctadas pelo token do tipo Bearer.
 
-  
-
-1. HTML
-
-  
-
-3. CSS
-
-  
-
-4. JS com Vuejs ( SPA com router e vuex )
-
-  
-
-## ESPECIFICAÇÕES
-
-  
-
-1. Visualmente deverá estilizar seus elementos utilizando css puro ( sem frameworks como bootstrap ou tailwind), lembrando que a utilização de flexbox e elementos responsivos serão considerados diferenciais e deve seguir fielmente o layout proposto: 
-**Link do layout ( figma ) :** https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694.
-
-  
-
-2. O Software deverá conter uma página de login que irá autenticar o sistema com um token JWT enviado pela api;
-
-  
-
-3. Deverá também, conter telas com todas as operações de um crud (Create, Read, Update, Delete) e estas deverão ser acessadas somente se a sessão estiver autenticada com um token válido.
-
-
-
-## REQUISITOS
-
-Os cadastros de contato devem conter 3 campos, sendo eles
-1. campo obrigatório nomeado name (String de no máximo 200 carácteres)
-2. campo obrigatório nomeado email (String de máximo 200 carácteres contendo obrigatório nomeado válido não necessariamente existente) 
-3. campo required mobile (Interger de no máximo 11 carácteres)
-
-O formulário deve ter tratativa de erro, sendo assim em caso de algum erro com o servidor uma mensagem tratada deve ser apresentada
-
-## API PARA INTEGRAÇÃO
-
-Autenticação
+#### Autenticar/logar
+```javascript
+POST '/auth/login'
 ```
-POST
-https://testfrontpl.herokuapp.com/login
 
-body:
-
+Body
+```json
 {
-    "user": "devfrontpl@diwe.com.br",
-    "pwd": "frontPl@2021"
+  "email": "user@diwe.com.br",
+  "password": "password"
 }
 ```
 
-Todas as demais rotas precisam receber o token como header.
-```
-HEADER
-content-type: appllication-json
-x-access-token: token retornado pela signin
+### Contatos
+Após autenticado, o usuário deve conseguir listar os contatos cadastrados, criar um novo contato, editar um contato existente e excluir um contato existente.
+
+
+#### Recuperar todos os contatos
+```javascript
+GET '/contacts'
 ```
 
-Criar Cliente
+#### Recuperar um contato por ID
+```javascript
+GET '/contacts/:id'
 ```
-POST
-https://testfrontpl.herokuapp.com/clientes
 
+#### Criar novo contato
+```javascript
+POST '/contacts'
+```
+Body (todos campos obirgatórios)
+```json
 {
-    "name": "nome_do_cliente",
-    "email": "email_do_cliente",
-    "mobile": "telefone_do_cliente"
+  "name": "Glauber",
+  "email": "glauber.castro@diwe.com.br",
+  "mobile": "00999999999"
 }
 ```
 
-Listar todos os cliente
+#### Editar um contato
+```javascript
+PUT '/contacts/:id'
 ```
-GET
-https://testfrontpl.herokuapp.com/clientes
-```
-
-Detalhes do cliente
-```
-GET
-https://testfrontpl.herokuapp.com/clientes/:id
-```
-
-Update de cliente
-```
-PUT
-https://testfrontpl.herokuapp.com/clientes/:id
-
+Body (todos campos opcionais)
+```json
 {
-    "name": "nome_do_cliente",
-    "email": "email_do_cliente",
-    "mobile": "telefone_do_cliente"
+  "name": "Glauber",
+  "email": "glauber.castro@diwe.com.br",
+  "mobile": "00999999999"
 }
 ```
 
-Excluir Cliente
+#### Excluir um contato por ID
+```javascript
+DELETE '/contacts/:id'
 ```
-DELETE
-https://testfrontpl.herokuapp.com/clientes/:id
-```
-
-
-### Para envio do teste:
-
+ 
+###### uso de bibliotecas é livre.
   
 
-  
+## Avaliação
 
-1. Deverá ser criado um repositório no git ou bitbucket com o nome de Test-Dev-Front-PL. Esse repositório deverá conter todo o código desenvolvido.
+O que vamos avaliar:
 
-  
+- Layout;
+- Boas práticas
+- Manutenibilidade;
+- Usabilidade;
+- Prazo estabelecido;
+- Raciocínio lógico;
+- Git flow; 
 
-2. Enviar o link do repositório para os emails de Marcus Vinicius (vinicius.bassalobre@diwe.com.br), Vinicius Silva (vinicius.silva@diwe.com.br) e Maicon Passos (maicon.passos@diwe.com.br)
+## Comece
+
+O processo do desafio deve ser:
+
+1. Crie um repositório para seu projeto
+
+2. Crie um **README.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
+___
+
+
+Qualquer dúvida e/ou problemas entre em contato com nossa equipe.
