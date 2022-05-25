@@ -11,7 +11,7 @@ ___
 O desafio consistente na criação de uma aplicação web para gerenciamento de uma lista de contatos seguindo o layout do Figma. Atente-se aos estilos do protótipo e detalhes de usabilidade do usuário.
 
 # Referências
-- [Figma](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=804%3A29](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio))
+- [Figma](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio)
 - [Ícones](https://feathericons.com/)
 - [Tipografia - Montserrat](https://fonts.google.com/specimen/Montserrat?query=mont)
 
